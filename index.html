@@ -8,7 +8,39 @@
   <body>
     <div id="app">
       <div>
-        <v-button></v-button>
+        <v-icon 
+          @click="yyy" 
+          name="home" 
+          color="#333" 
+          :width="1.2" 
+          :height="1.2">
+        </v-icon>
+        <v-button 
+          :width="66"
+          :height="32"
+          color="red"
+          background="black" 
+          icon-name="home"
+          icon-color="red"
+          :font-size="20"
+          :icon-width="1"
+          :icon-height="1"
+          icon-position="right">
+          按钮
+        </v-button>
+        <v-button 
+          color="red"
+          background="black" 
+          icon-name="home"
+          icon-color="red"
+          :font-size="16"
+          :icon-width="0.8"
+          :icon-height="0.8"
+          icon-position="left">
+          按钮
+        </v-button>
+        <v-button @click="yyy">按钮</v-button>
+        <v-button disabled>按钮</v-button>
       </div>
     </div>
   </body>

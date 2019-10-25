@@ -8,5 +8,10 @@ context.keys().forEach((path) => {
   Vue.component(res.default.name, res.default)
 })
 new Vue({
-  el: '#app'
+  el: '#app',
+  methods:{
+    yyy(){
+      console.log('yyy')
+    }
+  }
 })
