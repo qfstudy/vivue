@@ -2,6 +2,7 @@
   <button 
     class="v-button"
     @click="buttonClick"
+    :type="type"
     :class="buttonClass"
     :disabled="disabled"
     :style="{minWidth: `${width}px`, minHeight: `${height}px`, background, color, fontSize: `${fontSize}px`}">
@@ -27,9 +28,15 @@ export default {
     vIcon
   },
   props: {
-    disabled:{
+    disabled: {
       type: Boolean,
       default: false
+    },
+    type: {
+      type: String,
+      validator(value){
+        return['text'].indexOf(value)>-1
+      }
     },
     width: {
       type: Number
@@ -62,10 +69,7 @@ export default {
       type: String,
       default: 'left',
       validator(value){
-        return[
-          'left',
-          'right'
-        ].indexOf(value)>-1
+        return['left','right'].indexOf(value)>-1
       }
     }
   },
@@ -78,7 +82,8 @@ export default {
     buttonClass(){
       return {
         [`v-icon-${this.iconPosition}`]: this.iconName && this.iconPosition,
-        [`v-button-disabled`]: this.disabled
+        [`v-button-disabled`]: this.disabled,
+        [`v-button-${this.type}`]: this.type
       }
     }
   }
@@ -126,6 +131,9 @@ export default {
         order: 2;
         padding-left: 0.2em;
       }
+    }
+    &.v-button-text{
+      border: none;
     }
   }
 </style>

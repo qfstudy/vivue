@@ -39,27 +39,35 @@
           icon-position="left">
           按钮
         </v-button>
-        <v-button @click="yyy">按钮</v-button>
+        <v-button color="#40b8ff" type="text" @click="yyy">按钮</v-button>
         <v-button disabled>按钮</v-button>
       </div>
       <div>
         <v-button-group>
           <v-button 
-            :icon-width="0.8"
-            :icon-height="0.8"
+            :width="66"
+            :height="32"
+            icon-name="angle-left"
+            :font-size="16"
+            :icon-width="1"
+            :icon-height="1"
             icon-position="left">
-            按钮
+            按钮   
           </v-button>
           <v-button
-            :icon-width="0.8"
-            :icon-height="0.8"
-            icon-position="left">
+            :width="66"
+            :height="32"
+            :font-size="16">
             按钮
           </v-button>
           <v-button 
-            :icon-width="0.8"
-            :icon-height="0.8"
-            icon-position="left">
+            :width="66"
+            :height="32"
+            icon-name="angle-right"
+            :font-size="16"
+            :icon-width="1"
+            :icon-height="1"
+            icon-position="right">
             按钮
           </v-button>
         </v-button-group>

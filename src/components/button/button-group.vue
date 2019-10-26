@@ -21,7 +21,6 @@ export default {
 	.v-button-group{
 		display: inline-flex;
 		vertical-align: middle;
-		border: 1px solid #e1e1e1;
 		border-radius: 4px;
 		> .v-button{
 			border-radius: 0;
