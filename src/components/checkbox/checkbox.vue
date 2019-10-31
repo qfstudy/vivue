@@ -16,9 +16,7 @@
         type="checkbox"
         :disabled="disabled"
         :value="label"
-        @change="handleChange"
-        @focus="focus = true"
-        @blur="focus = false">
+        @change="handleChange">
     </span>
 		<span class="v-checkbox__label" v-if="$slots.default || label">
       <slot></slot>
